@@ -1,0 +1,235 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 6,
+    "passes": 6,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-06-21T20:41:43.716Z",
+    "end": "2022-06-21T20:41:49.603Z",
+    "duration": 5887,
+    "testsRegistered": 6,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "f3a2de14-710b-4af4-bd46-1f4f7eb61732",
+      "title": "",
+      "fullFile": "/Users/stepanvana/Documents/Selenium/phpTravels_test/test/login_page.spec.js",
+      "file": "/test/login_page.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ddd87114-8f24-4ecd-b3e7-c5f269621e36",
+          "title": "Login Test",
+          "fullFile": "/Users/stepanvana/Documents/Selenium/phpTravels_test/test/login_page.spec.js",
+          "file": "/test/login_page.spec.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook in \"Login Test\"",
+              "fullTitle": "Login Test \"before all\" hook in \"Login Test\"",
+              "timedOut": false,
+              "duration": 3231,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "driver = DriverManager.buildDriver();\nloginPage = new LoginPage(driver);\nawait loginPage.visit(baseUrl);\nawait loginPage.openApp();",
+              "err": {},
+              "uuid": "81b1747e-3d45-44cf-ad6d-9ed091b504b6",
+              "parentUUID": "ddd87114-8f24-4ecd-b3e7-c5f269621e36",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook in \"Login Test\"",
+              "fullTitle": "Login Test \"after all\" hook in \"Login Test\"",
+              "timedOut": false,
+              "duration": 53,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await loginPage.quit();",
+              "err": {},
+              "uuid": "2086e5a7-fd50-4a73-bd24-32adae38774e",
+              "parentUUID": "ddd87114-8f24-4ecd-b3e7-c5f269621e36",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "Enter user email address in the email field and check if the field is enabled",
+              "fullTitle": "Login Test Enter user email address in the email field and check if the field is enabled",
+              "timedOut": false,
+              "duration": 500,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "let isEnabled = await loginPage.userEmail();\nexpect(isEnabled).to.be.true;",
+              "err": {},
+              "uuid": "625dd8b6-6a7a-4d76-8e04-40dc04150c3d",
+              "parentUUID": "ddd87114-8f24-4ecd-b3e7-c5f269621e36",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Enter user password in the password field and check if the field is enabled",
+              "fullTitle": "Login Test Enter user password in the password field and check if the field is enabled",
+              "timedOut": false,
+              "duration": 72,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "let isEnabled = await loginPage.userPassword();\nexpect(isEnabled).to.be.true;",
+              "err": {},
+              "uuid": "93943294-658f-45aa-931e-1f635bcb3093",
+              "parentUUID": "ddd87114-8f24-4ecd-b3e7-c5f269621e36",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify sign in button state is enabled",
+              "fullTitle": "Login Test Verify sign in button state is enabled",
+              "timedOut": false,
+              "duration": 52,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const result = await loginPage.signInButton();\nexpect(result.type).to.equal(buttonText);\nexpect(result.state).to.be.true;",
+              "err": {},
+              "uuid": "f4b5666d-7a67-436b-aec3-d0a4d70c6c1d",
+              "parentUUID": "ddd87114-8f24-4ecd-b3e7-c5f269621e36",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Click on sign in button and verify the url",
+              "fullTitle": "Login Test Click on sign in button and verify the url",
+              "timedOut": false,
+              "duration": 1474,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const url = await loginPage.clicksignInButton();\nexpect(url).to.equal(loginUrl);",
+              "err": {},
+              "uuid": "1210a512-87a6-4bec-82bc-7cf41b08612b",
+              "parentUUID": "ddd87114-8f24-4ecd-b3e7-c5f269621e36",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Check the title of the page",
+              "fullTitle": "Login Test Check the title of the page",
+              "timedOut": false,
+              "duration": 5,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const getTitle = await loginPage.getTitle();\nexpect(getTitle).to.include(title);",
+              "err": {},
+              "uuid": "9d0bbee2-391a-45be-9dc3-4f9fd97caa8b",
+              "parentUUID": "ddd87114-8f24-4ecd-b3e7-c5f269621e36",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Take a screenshot after user logged in to the application",
+              "fullTitle": "Login Test Take a screenshot after user logged in to the application",
+              "timedOut": false,
+              "duration": 492,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "return await loginPage.takeScreenShot().then((data) => {\n    let screenshotPath = `Screenshots/${timestamp}.png`;\n    console.log(`Saving Screenshot as: ${screenshotPath}`);\n    fs.writeFileSync(screenshotPath, data, \"base64\");\n});",
+              "err": {},
+              "uuid": "76d456ba-f0cc-43cc-9df8-b27cf2a86a3c",
+              "parentUUID": "ddd87114-8f24-4ecd-b3e7-c5f269621e36",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "625dd8b6-6a7a-4d76-8e04-40dc04150c3d",
+            "93943294-658f-45aa-931e-1f635bcb3093",
+            "f4b5666d-7a67-436b-aec3-d0a4d70c6c1d",
+            "1210a512-87a6-4bec-82bc-7cf41b08612b",
+            "9d0bbee2-391a-45be-9dc3-4f9fd97caa8b",
+            "76d456ba-f0cc-43cc-9df8-b27cf2a86a3c"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2595,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 50000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "10.0.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "autoOpen": "true"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
