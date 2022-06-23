@@ -16,13 +16,6 @@ const mochaTimeout = locators.mochaTimeout,
     buttonText = locators.buttonText,
     title = locators.title;
 
-// ### 1. Launch the Application
-// ### 2. Enter user email address
-// ### 3. Enter User password
-// ### 4. Click on the Submit Button
-// ### 5. User is navigated to Home Page
-// ### 6. Take a Screen shot of the page
-
 describe("Login Test", async function () {
     this.timeout(mochaTimeout);
 
